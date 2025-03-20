@@ -24,7 +24,7 @@ Route::group([
     "prefix" => "cars",
     "controller" => CarController::class
 ], function () {
-    Route::get("/", "get")->name("cars.list");
+    Route::get("/", "list")->name("cars.list");
     Route::get("/create", "createForm")->name("cars.createForm");
     Route::get("/update/{car}", "updateForm")->name("cars.updateForm");
 
@@ -37,7 +37,7 @@ Route::group([
     "prefix" => "services",
     "controller" => ServiceController::class
 ], function () {
-    Route::get("/", "get")->name("services.list");
+    Route::get("/", "list")->name("services.list");
     Route::get("/create", "createForm")->name("services.createForm");
     Route::get("/update/{service}", "updateForm")->name("services.updateForm");
 
@@ -50,7 +50,7 @@ Route::group([
     "prefix" => "mechanics",
     "controller" => MechanicController::class
 ], function () {
-    Route::get("/", "get")->name("mechnaics.list");
+    Route::get("/", "list")->name("mechnaics.list");
     Route::get("/create", "createForm")->name("mechnaics.createForm");
     Route::get("/update/{mechnaic}", "updateForm")->name("mechnaics.updateForm");
 
