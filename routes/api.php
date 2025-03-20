@@ -26,19 +26,28 @@ Route::group([
     "prefix" => "cars",
     "controller" => CarController::class
 ], function () {
-    
+    Route::get("/", "apiGet");
+    Route::post("/create", "apiCreate");
+    Route::put("/update/{car}", "apiUpdate");
+    Route::delete("/delete/{car}", "apiDelete");
 });
 
 Route::group([
     "prefix" => "services",
     "controller" => ServiceController::class
 ], function () {
-    
+    Route::get("/", "apiGet");
+    Route::post("/create", "apiCreate");
+    Route::put("/update/{service}", "apiUpdate");
+    Route::delete("/delete/{service}", "apiDelete");
 });
 
 Route::group([
     "prefix" => "mechanics",
     "controller" => MechanicController::class
 ], function () {
-    
+    Route::get("/", "apiGet");
+    Route::post("/create", "apiCreate");
+    Route::put("/update/{mechanic}", "apiUpdate");
+    Route::delete("/delete/{mechanic}", "apiDelete");
 });
