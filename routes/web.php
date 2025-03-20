@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\MechanicController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +18,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::group([
+    "prefix" => "cars",
+    "controller" => CarController::class
+], function () {
+    
+});
+
+Route::group([
+    "prefix" => "services",
+    "controller" => ServiceController::class
+], function () {
+    
+});
+
+Route::group([
+    "prefix" => "mechanics",
+    "controller" => MechanicController::class
+], function () {
+    
 });
