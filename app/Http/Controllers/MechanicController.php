@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mechanic;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class MechanicController extends Controller
@@ -51,12 +52,16 @@ class MechanicController extends Controller
 
     public function createForm()
     {
-        return view("mechanics.create");
+        $services = Service::query()->get();
+
+        return view("mechanics.create", ['services' => $services]);
     }
 
     public function updateForm(Mechanic $mechanic)
     {
-        return view("mechanics.update", ["mechanic" => $mechanic]);
+        $services = Service::query()->get();
+
+        return view("mechanics.update", ["mechanic" => $mechanic, 'services' => $services]);
     }
 
     // -----------------------------------------------
