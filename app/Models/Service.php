@@ -18,12 +18,12 @@ class Service extends Model
     // 2 kapcsolat
     public function cars()
     {
-        return $this->hasMany("cars", "service_id", "id");
+        return $this->hasMany( Car::class, "service_id", "id");
     }
 
     public function mechanics()
     {
-        return $this->hasMany("mechnaics", "service_id", "id");
+        return $this->hasMany( Mechanic::class, "service_id", "id");
     }
 
 }
