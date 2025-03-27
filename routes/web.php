@@ -50,11 +50,11 @@ Route::group([
     "prefix" => "mechanics",
     "controller" => MechanicController::class
 ], function () {
-    Route::get("/", "list")->name("mechnaics.list");
-    Route::get("/create", "createForm")->name("mechnaics.createForm");
-    Route::get("/update/{mechnaic}", "updateForm")->name("mechnaics.updateForm");
+    Route::get("/", "list")->name("mechanics.list");
+    Route::get("/create", "createForm")->name("mechanics.createForm");
+    Route::get("/update/{mechanic}", "updateForm")->name("mechanics.updateForm");
 
-    Route::post("/create", "create")->name("mechnaics.create");
-    Route::post("/update/{mechnaic}", "update")->name("mechnaics.update");
-    Route::delete("/delete/{mechnaic}", "delete")->name("mechnaics.delete");
+    Route::post("/create", "create")->name("mechanics.create");
+    Route::post("/update/{mechanic}", "update")->name("mechanics.update");
+    Route::delete("/delete/{mechanic}", "delete")->name("mechanics.delete");
 });
